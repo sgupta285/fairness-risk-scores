@@ -1,0 +1,11 @@
+group 1: counts per 100 (R=1/5:Y=0,Y=1; R=4/5:Y=0,Y=1) = [60, 15, 5, 20]
+group 1: rho=7/20 x=16/65 y=19/35 FPR=1/13 FNR=3/7 PPV=4/5
+group 2: counts per 100 (R=1/5:Y=0,Y=1; R=4/5:Y=0,Y=1) = [20, 5, 15, 60]
+group 2: rho=13/20 x=16/35 y=49/65 FPR=3/7 FNR=1/13 PPV=4/5
+EO point=(13/41, 28/41) group1 mix=32/123 group2 retain=91/123 loss 1/5 -> 13/41
+group 1: rescored values P(Y=1|D=1)=196/365, P(Y=1|D=0)=1/5
+group 2: rescored values P(Y=1|D=1)=4/5, P(Y=1|D=0)=169/365
+Pleiss: s1=1/4 t1=3/4 s2=9/50 t2=9/50 alpha=7/32 -> s2=1/4 t2=1/4
+Pleiss: Brier 9/100 -> 1/8 (+7/200); variance -7/200
+Pleiss Thm 1 caveat: s1=s2=1/4 and t1/3=t2=1/4 with imperfect calibrated scores
+Pleiss: zero-denominator case (group 2 already constant) -> alpha = 0; target above ceiling rejected
